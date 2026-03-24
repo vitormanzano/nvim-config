@@ -9,8 +9,8 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = false
-
+vim.opt.linebreak = true  -- quebra na palavra, não no meio dela              
+vim.opt.wrap = true 
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
