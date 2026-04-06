@@ -1,14 +1,17 @@
 return {
-    {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
-        config = function()
-            require("catppuccin").setup({
-                flavour = "mocha", -- latte, frappe, macchiato, mocha
-                transparent_background = true,
-            })
-            vim.cmd.colorscheme("catppuccin")
-        end
-    }
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+        require("rose-pine").setup({
+            variant = "moon",
+            extend_background_behind_borders = true,
+            
+            styles = {
+                bold = true,
+                italic = true,
+                transparency = true
+            },
+        })
+        vim.cmd("colorscheme rose-pine")
+    end
 }
