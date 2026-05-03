@@ -17,6 +17,8 @@
           "tailwindcss",
           "pyright",   -- Python
           "yamlls",    -- YAML
+          "bashls",
+          "clangd",
         },
         auto_install = true,
       },
@@ -28,7 +30,7 @@
         local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
         vim.lsp.config("*", { capabilities = capabilities })
-        vim.lsp.enable({ "ts_ls", "html", "lua_ls", "tailwindcss", "pyright", "yamlls" })
+        vim.lsp.enable({ "ts_ls", "html", "lua_ls", "tailwindcss", "pyright", "yamlls", "clangd" })
 
         vim.api.nvim_create_autocmd("LspAttach", {
           callback = function(args)
